@@ -1,0 +1,320 @@
+<h3 id="using-markdown-in-articles">Using Markdown in Articles</h3>
+<p>Markdown is designed as an easy language for writing, so its syntax is quite simplified. It uses punctuation characters only, and uses them in ways they are often already used. For example, to emphasize some text, you would type <code>*emphasized text*</code>. That is delivered to the web browser as <code>&lt;em&gt;emphasized text&lt;/em&gt;</code>, and rendered on screen as <em>emphasized text</em>.</p>
+<h4 id="paragraphs">Paragraphs</h4>
+<p>To create a new paragraph in Markdown, create a blank line between two written paragraphs - it can contain any whitespace characters (space, tab, etc), as long as it appears blank.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+This is the first paragraph.
+
+This is the second paragraph
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>This is the first paragraph.<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>
+
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>This is the second paragraph<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><p>This is the first paragraph.</p>
+<p>This is the second paragraph</p>
+</div>
+</div>
+</div>
+</div>
+<p>Markdown will treat a single new line as part of the same paragraph, and ignores the newline. To keep a line break, you need to enter two spaces before pressing <code>Enter</code>:</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+This is a sentence with one space after it.?
+This is the second sentence of the paragraph.
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>This is the first paragraph. This is the second sentence of the paragraph.<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>
+
+This is the a sentence with two spaces after it.??
+This is the second sentence of the paragraph.
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>This is the first paragraph.<span style="color:Blue;">&lt;</span><span style="color:#A31515;">br</span> <span style="color:Blue;">/&gt;</span>
+This is the second sentence of the paragraph.<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">p</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><p>This is a sentence with one space after it.
+This is the second sentence of the paragraph.<br />
+.<br />
+This is the a sentence with two spaces after it.<br />
+This is the second sentence of the paragraph.</p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="headers">Headers</h4>
+<p>To set a header, place a number of <code>#</code> equal to the intended header level before the header text. There must be a space between the <code>#</code> and the header text, and the header may be the only thing on the line. Optionally, you may close the header with <code>#</code> as well, with any number of <code>#</code>.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+##### Headers
+### Headers #
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">h5</span><span style="color:Blue;">&gt;</span>Headers<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">h5</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">h3</span><span style="color:Blue;">&gt;</span>Headers<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">h3</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><h5 id="headers-1">Headers</h5>
+<h3 id="headers-2">Headers</h3>
+</div>
+</div>
+</div>
+</div>
+<h4 id="emphasis">Emphasis <a href="#emphasis"></a></h4>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+*emphasis/italics*
+**strong/bold**  
+~~strikethrough/deleted~~
+sub~script~
+super^script^
+++inserted text++
+==marked text==
+
+
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">em</span><span style="color:Blue;">&gt;</span>emphasis/italics<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">em</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">strong</span><span style="color:Blue;">&gt;</span>strong/bold<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">strong</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">del</span><span style="color:Blue;">&gt;</span>strikethrough/deleted<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">del</span><span style="color:Blue;">&gt;</span>
+sub<span style="color:Blue;">&lt;</span><span style="color:#A31515;">sub</span><span style="color:Blue;">&gt;</span>script<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">sub</span><span style="color:Blue;">&gt;</span>
+super<span style="color:Blue;">&lt;</span><span style="color:#A31515;">sup</span><span style="color:Blue;">&gt;</span>script<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">sup</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">ins</span><span style="color:Blue;">&gt;</span>inserted text<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">ins</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">mark</span><span style="color:Blue;">&gt;</span>marked text<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">mark</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<h4 id="lists">Lists</h4>
+<p>Markdown supports both ordered (numbered) and unordered lists.</p>
+<p>For ordered lists, start a new line with a number followed by a <code>.</code> and a space, then your list item. Each list item will go on a new line.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+1. List item
+2. List item
+3. List item
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">ol</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>List item<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>List item<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>List item<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">ol</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div>
+<ol>
+<li>List item</li>
+<li>List item</li>
+<li>List item</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>Only the first number matters, as it sets which number your list starts with; the other list items can use any numbers.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+3. Item 1
+1. Item 2
+9. Item 3
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">ol</span> <span style="color:Red;">start</span><span style="color:Blue;">=</span><span style="color:Blue;">&quot;3&quot;</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>Item 1<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>Item 2<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>Item 3<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">li</span><span style="color:Blue;">&gt;</span>
+<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">ol</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div>
+<ol start="3">
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<p>Unordered lists can use <code>*</code>, <code>-</code>, or <code>+</code> as the designator, followed by a space, and then the list item.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+* Item 1
+* Item 2
+* Item 3
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<h4 id="links">Links</h4>
+<p>To create an inline link, wrap the desired text in <code>[ ]</code>, and place the URL in <code>( )</code>.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+[Lafayette Consolidated Government](https://www.lafayettela.gov)
+.
+<span style="color:Blue;">&lt;</span><span style="color:#A31515;">a</span> <span style="color:Red;">href</span><span style="color:Blue;">=</span><span style="color:Blue;">&quot;https://www.lafayettela.gov&quot;</span><span style="color:Blue;">&gt;</span>Lafayette Consolidated Government<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">a</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><p><a href="https://www.lafayettela.gov">Lafayette Consolidated Government</a></p>
+</div>
+</div>
+</div>
+</div>
+<h4 id="code">Code</h4>
+<p>To highlight small segments of code inline, surround your code with the backtick character <code>`</code>. You've seen several examples of what that looks like throughout this article.</p>
+<div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+You cannot implicitly convert variable type `string` to `int`.
+.
+You cannot implicitly convert variable type <span style="color:Blue;">&lt;</span><span style="color:#A31515;">code</span><span style="color:Blue;">&gt;</span>string<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">code</span><span style="color:Blue;">&gt;</span> to <span style="color:Blue;">&lt;</span><span style="color:#A31515;">code</span><span style="color:Blue;">&gt;</span>int<span style="color:Blue;">&lt;/</span><span style="color:#A31515;">code</span><span style="color:Blue;">&gt;</span>.
+</pre></div>
+</div>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><p>You cannot implicitly convert variable type <code>string</code> to <code>int</code>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>For larger pieces of code, you can use a code block, which will even allow syntax highlighting. On a new line, enter three (or more) backticks, and then optionally the name of the language you will be using to enable syntax highlighting. Type your code, including indents, and then on a new line type the same number of backticks you used to open the block.</p>
+<p>Supported languages include C# (csharp), HTML, JavaScript (js), CSS, and more.</p>
+<pre><code>```html
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;
+                @Html.DisplayNameFor(model =&gt; model.Title)
+            &lt;/th&gt;
+            &lt;th&gt;
+                @Html.DisplayNameFor(model =&gt; model.CreatedBy)
+            &lt;/th&gt;
+            &lt;th&gt;
+                @Html.DisplayNameFor(model =&gt; model.CreatedDate)
+            &lt;/th&gt;
+            &lt;!-- &lt;th&gt;&lt;/th&gt; --&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+```
+</code></pre>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><div class="lang-html editor-colors"><div style="color:Black;background-color:White;"><pre>
+    <span style="color:Blue;">&lt;</span><span style="color:#A31515;">thead</span><span style="color:Blue;">&gt;</span>
+        <span style="color:Blue;">&lt;</span><span style="color:#A31515;">tr</span><span style="color:Blue;">&gt;</span>
+            <span style="color:Blue;">&lt;</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+                @Html.DisplayNameFor(model =&gt; model.Title)
+            <span style="color:Blue;">&lt;/</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+            <span style="color:Blue;">&lt;</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+                @Html.DisplayNameFor(model =&gt; model.CreatedBy)
+            <span style="color:Blue;">&lt;/</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+            <span style="color:Blue;">&lt;</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+                @Html.DisplayNameFor(model =&gt; model.CreatedDate)
+            <span style="color:Blue;">&lt;/</span><span style="color:#A31515;">th</span><span style="color:Blue;">&gt;</span>
+            <span style="color:Green;">&lt;!-- &lt;th&gt;&lt;/th&gt; --&gt;</span>
+        <span style="color:Blue;">&lt;/</span><span style="color:#A31515;">tr</span><span style="color:Blue;">&gt;</span>
+    <span style="color:Blue;">&lt;/</span><span style="color:#A31515;">thead</span><span style="color:Blue;">&gt;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<pre><code>```csharp
+// GET: Topics
+public async Task&lt;IActionResult&gt; Index()
+{
+    return View(await _context.Topic.ToListAsync());
+}
+```
+</code></pre>
+<div class="output">
+<div class="outputContainer">
+<div>
+<div class="pullout"><p>Output</p>
+</div>
+<div><div class="lang-csharp editor-colors"><div style="color:Black;background-color:White;"><pre>
+<span style="color:Green;">// GET: Topics</span>
+<span style="color:Blue;">public</span> async Task&lt;IActionResult&gt; Index()
+{
+    <span style="color:Blue;">return</span> View(await _context.Topic.ToListAsync());
+}
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- blank templates for future additions
+```html
+
+```
+
+::::::output
+:::::outputContainer
+::::
+:::pullout
+Output
+:::
+:::
+
+:::
+::::
+:::::
+::::::
+
+
+
+```html
+
+```
+
+::::::output
+:::::outputContainer
+::::
+:::pullout
+Output
+:::
+:::
+
+:::
+::::
+:::::
+:::::: -->
+
+        </div>
+    </div>
+</div>
